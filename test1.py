@@ -14,7 +14,7 @@ import nltk
 nltk.download('stopwords')
 
 # Load the dataset
-file_path = 'Dataset-SA.csv'
+file_path = '/ass.zip/Dataset-SA.csv'
 data = pd.read_csv(file_path)
 
 # Display first few rows to inspect the data
