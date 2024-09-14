@@ -17,7 +17,7 @@ import pandas as pd
 import zipfile
 
 # Define the path to the ZIP file
-zip_file_path = '/mnt/data/ass.zip'  # Path to the ZIP file
+zip_file_path = 'ass.zip'  # Path to the ZIP file
 csv_file_name = 'dataset.csv'  # Name of the CSV file inside the ZIP
 
 # Extract the CSV file from the ZIP archive and read it
