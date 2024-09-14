@@ -13,12 +13,21 @@ import nltk
 # Download NLTK resources
 nltk.download('stopwords')
 
-# Load the dataset
-file_path = '/ass.zip/Dataset-SA.csv'
-data = pd.read_csv(file_path)
+import pandas as pd
+import zipfile
 
-# Display first few rows to inspect the data
+# Define the path to the ZIP file
+zip_file_path = '/mnt/data/ass.zip'  # Path to the ZIP file
+csv_file_name = 'dataset.csv'  # Name of the CSV file inside the ZIP
+
+# Extract the CSV file from the ZIP archive and read it
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    with zip_ref.open(csv_file_name) as file:
+        data = pd.read_csv(file)
+
+# Display the first few rows to inspect the data
 print(data.head())
+
 
 # Assuming 'review' is the column containing the product reviews
 # and 'label' (optional) is the column with sentiment (1 for positive, 0 for negative)
