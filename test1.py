@@ -14,7 +14,7 @@ import nltk
 nltk.download('stopwords')
 
 # Load the dataset
-file_path = '/mnt/data/flipkart_product.csv'
+file_path = 'Dataset-SA.csv'
 data = pd.read_csv(file_path)
 
 # Display first few rows to inspect the data
